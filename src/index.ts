@@ -1,6 +1,7 @@
 import MockAdaptar from '@bot-whatsapp/database/mock';
 import BotWhatsapp from '@bot-whatsapp/bot'
-import { ProviderWS } from '@bot-whatsapp/provider/baileys';
+import ProviderWS from '@bot-whatsapp/provider/baileys';
+
 
 
 const flujoDeSaludar = BotWhatsapp.addKeyword(['hola' , 'buenas'])

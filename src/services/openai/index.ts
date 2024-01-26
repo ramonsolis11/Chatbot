@@ -1,5 +1,6 @@
 import OpenAI from "openai";
-import { ChatCompletionAssistantMessageParam } from "openai/resources";
+import { ChatCompletionMessageParam } from "openai/resources";
+import { generatePrompt } from "./prompt";
 
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
@@ -10,14 +11,14 @@ const openai = new OpenAI({
      * @param name 
      * @param history 
      */
-    const run = async (name:string, history:ChatCompletionAssistantMessageParam[]): Promise<string> => {
+    const run = async (name: string, history:ChatCompletionMessageParam[]): Promise<string> => {
         const response = await openai.chat.completions.create({
             model: "gpt-3.5-turbo",
             messages: [
             {
                 "role": "system",
                 "content": generatePrompt(name)
-            }
+            },
             ...history
             ],
             temperature: 1,
@@ -31,5 +32,5 @@ const openai = new OpenAI({
 
 }
 
-export {run}
+export { run }
 

@@ -1,0 +1,16 @@
+{
+  "name": "Mi_ChatBot",
+  "version": "1.0.0",
+  "description": "Chat ventas Whatsapp",
+  "main": "index.js",
+  "author": "Ramon Solis Nuñez <ramonsolis11@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^20.11.7",
+    "dotenv": "^16.4.1",
+    "openai": "^4.26.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "whatsapp-web.js": "^1.23.0"
+  }
+}

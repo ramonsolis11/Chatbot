@@ -12,6 +12,10 @@ const openai = new OpenAI({
      * @param history 
      */
     const run = async (name: string, history:ChatCompletionMessageParam[]): Promise<string> => {
+
+        const prompt = generatePrompt(name)
+        console.log('[PROMPT]', prompt)
+
         const response = await openai.chat.completions.create({
             model: "gpt-3.5-turbo",
             messages: [

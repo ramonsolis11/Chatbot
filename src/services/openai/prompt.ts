@@ -50,7 +50,8 @@ Recordatorio: Tu objetivo es ser persuasivo, amigable y profesional, adaptando t
  */
 const findRelevantServiceInfo = (question) => {
     const keywords = question.toLowerCase().split(/\s+/);
-    for (let { service, description } of DATABASE) {
+    const databaseArray = JSON.parse(DATABASE); // Convertir DATABASE en un array de objetos
+    for (let { service, description } of databaseArray) { // Acceder a la propiedad 'description' dentro del bucle
         if (keywords.some(keyword => description.toLowerCase().includes(keyword))) {
             return description; // Retorna la descripción del servicio coincidente
         }
@@ -65,7 +66,7 @@ const findRelevantServiceInfo = (question) => {
  * @param question La pregunta del cliente.
  * @returns Un string que representa el prompt generado.
  */
-const generatePrompt = (name, question) => {
+const generatePrompt = (name: string, question: string) => {
     let context = findRelevantServiceInfo(question); // Busca información relevante en la base de datos.
 
     return PROMPT.replaceAll('{customer_name}', name)

@@ -11,18 +11,19 @@
     },
     "keywords": [],
     "dependencies": {
-        "@bot-whatsapp/bot": "0.0.223-alpha.0",
+        "@bot-whatsapp/bot": "^0.0.223-alpha.0",
         "@bot-whatsapp/cli": "latest",
         "@bot-whatsapp/database": "latest",
         "@bot-whatsapp/portal": "latest",
-        "@bot-whatsapp/provider": "latest",
+        "@bot-whatsapp/provider": "^0.1.24",
+        "@types/paypal-rest-sdk": "^1.7.9",
         "@whiskeysockets/baileys": "^6.5.0",
         "bot-ws-plugin-openai": "^1.0.6",
         "dotenv": "^16.3.1",
         "express": "^4.18.2",
-        "openai": "^4.24.1",
+        "openai": "^4.26.0",
         "paypal-rest-sdk": "^1.8.1",
-        "wa-sticker-formatter": "4.3.2"
+        "wa-sticker-formatter": "^3.6.0"
     },
     "author": "",
     "license": "ISC",

@@ -1,11 +1,19 @@
 import BotWhatsapp from '@bot-whatsapp/bot';
 import helloFlow from './hello.flow';
+import welcomeFlow from './welcome.flow';
+import paypalFlow from './paypal.flow';
+import chatbotFlow from './chatbot.flow';
+import nodeFlow from './node.flow';
 
 /**
- * Exporta el flujo principal del bot
+ * Debes de implementasr todos los flujos
  */
 export default BotWhatsapp.createFlow(
     [
-    helloFlow
+        helloFlow,
+        welcomeFlow,
+        paypalFlow,
+        chatbotFlow,
+        nodeFlow
     ]
 )

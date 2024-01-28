@@ -15,7 +15,7 @@ const initServer = (botInstance:any) => {
         console.log(`[QUERY]:`,query)
 
         if(query && query?.status === 'fail'){
-            res.redirect(`https://app.codigoencasa.com`)
+            res.redirect(`https://www.facebook.com/innovawebmarketinghn`)
             return
         }
 

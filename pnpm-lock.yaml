@@ -20,6 +20,9 @@ dependencies:
   '@bot-whatsapp/provider':
     specifier: ^0.1.24
     version: 0.1.38
+  '@types/paypal-rest-sdk':
+    specifier: ^1.7.9
+    version: 1.7.9
   '@whiskeysockets/baileys':
     specifier: ^6.5.0
     version: 6.6.0
@@ -2167,6 +2170,12 @@ packages:
     resolution: {integrity: sha512-i7omyekpPTNdv4Jb/Rgqg0RU8YqLcNsI12quKSDkRXNfx7Wxdm6HhK1awT3xTgEkgxPn3bvnSpiEAc7a7Lpyow==}
     dependencies:
       undici-types: 5.26.5
+
+  /@types/paypal-rest-sdk@1.7.9:
+    resolution: {integrity: sha512-Wu/F8HaC0UbAPGn983o6KLMsF5zxAzsLOj9dzOU9xRyqbsDuNBp1No1bM/9T3vdFiV5HdfwhXrhfhD1gRTycTg==}
+    dependencies:
+      '@types/node': 20.11.8
+    dev: false
 
   /@types/qs@6.9.11:
     resolution: {integrity: sha512-oGk0gmhnEJK4Yyk+oI7EfXsLayXatCWPHary1MtcmbAifkobT9cM9yutG/hZKIseOU0MqbIwQ/u2nn/Gb+ltuQ==}

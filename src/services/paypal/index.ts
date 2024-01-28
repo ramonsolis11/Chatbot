@@ -38,7 +38,7 @@ const generatePaymentLink = async (price:string, email:string): Promise<string> 
     };
 
 
-    return new Promise((resolve, reject) =>  paypal.payment.create(payloadPayment, function (error: any, payment: { links: any; }) {
+    return new Promise((resolve, reject) =>  paypal.payment.create(payloadPayment, function (error: any, payment: any) {
         if (error) {
             reject(error)
         } else {
@@ -50,7 +50,7 @@ const generatePaymentLink = async (price:string, email:string): Promise<string> 
             }
         }
     }))
-  
+
 
 }
 

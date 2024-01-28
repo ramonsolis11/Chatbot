@@ -27,12 +27,12 @@ const initServer = (botInstance:any) => {
         const fileStream = createReadStream(PATH_QR);
         res.writeHead(200, { "Content-Type": "image/png" });
         fileStream.pipe(res);
-      });
+    });
 
 
     app.listen(PORT, () => {
         console.log(`http://locahost:${PORT} listo!`)
     })
- }
+}
 
 export { initServer }
